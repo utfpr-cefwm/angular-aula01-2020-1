@@ -6,6 +6,7 @@ import localePt from '@angular/common/locales/pt';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConsultaSaldoComponent } from './components/consulta-saldo/consulta-saldo.component';
+import { ClassNamePorValorPipe } from './pipes/class-name-por-valor.pipe';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -13,6 +14,7 @@ registerLocaleData(localePt, 'pt-BR');
   declarations: [
     AppComponent,
     ConsultaSaldoComponent,
+    ClassNamePorValorPipe,
   ],
   imports: [
     BrowserModule,
