@@ -7,4 +7,13 @@ export class Cliente {
   ) {
   }
 
+  /**
+   * Disponibiliza crédito pré-aprovado para clientes de alto saldo.
+   */
+  public get creditoPreAprovado(): number {
+    return this.saldo >= 10000
+    ? 20000
+    : 0;
+  }
+
 }
