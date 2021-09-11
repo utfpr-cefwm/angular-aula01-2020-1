@@ -3,7 +3,7 @@
   <header>
     <div>
       Último login:
-      {{ cliente.ultimoLogin | date }}
+      {{ cliente.ultimoLogin | date:'short' }}
     </div>
     <div>
       Cliente:
@@ -11,7 +11,7 @@
     </div>
     <div>
       Saldo:
-      {{ cliente.saldo | number }}
+      {{ cliente.saldo | currency:'BRL' }}
     </div>
   </header>
 </section>
