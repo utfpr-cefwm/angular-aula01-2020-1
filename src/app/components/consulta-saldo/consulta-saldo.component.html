@@ -17,5 +17,13 @@
         {{ cliente.saldo | currency:'BRL' }}
       </span>
     </div>
+    <div>
+      <b>Crédito pré-aprovado:</b>
+      <span
+        [className]="cliente.creditoPreAprovado | classNamePorValor:confs"
+      >
+        {{ cliente.creditoPreAprovado | currency:'BRL' }}
+      </span>
+    </div>
   </header>
 </section>
