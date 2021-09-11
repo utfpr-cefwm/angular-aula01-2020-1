@@ -17,11 +17,9 @@
         {{ cliente.saldo | currency:'BRL' }}
       </span>
     </div>
-    <div>
+    <div *ngIf="cliente.creditoPreAprovado > 0">
       <b>Crédito pré-aprovado:</b>
-      <span
-        [className]="cliente.creditoPreAprovado | classNamePorValor:confs"
-      >
+      <span class="verde">
         {{ cliente.creditoPreAprovado | currency:'BRL' }}
       </span>
     </div>
