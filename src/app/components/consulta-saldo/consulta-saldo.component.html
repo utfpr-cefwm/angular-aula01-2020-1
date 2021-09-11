@@ -11,7 +11,11 @@
     </div>
     <div>
       <b>Saldo:</b>
-      {{ cliente.saldo | currency:'BRL' }}
+      <span
+        [className]="cliente.saldo | classNamePorValor:confs"
+      >
+        {{ cliente.saldo | currency:'BRL' }}
+      </span>
     </div>
   </header>
 </section>

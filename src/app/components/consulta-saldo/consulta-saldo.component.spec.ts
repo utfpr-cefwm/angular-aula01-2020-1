@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { ClassNamePorValorPipe } from 'src/app/pipes/class-name-por-valor.pipe';
 import { ConsultaSaldoComponent } from './consulta-saldo.component';
 
 describe('ConsultaSaldoComponent', () => {
@@ -11,6 +12,7 @@ describe('ConsultaSaldoComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         ConsultaSaldoComponent,
+        ClassNamePorValorPipe,
       ],
     }).compileComponents();
   });

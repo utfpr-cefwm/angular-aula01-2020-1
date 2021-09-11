@@ -9,6 +9,11 @@ import { Cliente } from 'src/app/models/cliente';
 })
 export class ConsultaSaldoComponent implements OnInit {
 
+  public confs = {
+    classePositivo: 'verde',
+    classeNegativo: 'vermelho',
+  };
+
   public cliente: Cliente = new Cliente(
     'Francisco das Torres',
     1.50,
