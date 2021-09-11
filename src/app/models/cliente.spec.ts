@@ -5,7 +5,11 @@ describe('Cliente', () => {
   let cliente: Cliente;
 
   beforeEach(() => {
-    cliente = new Cliente();
+    cliente = new Cliente(
+      'João da Silva',
+      100.00,
+      new Date(),
+    );
   });
 
   it('should create an instance', () => {
