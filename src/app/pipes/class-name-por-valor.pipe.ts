@@ -7,14 +7,19 @@ export class ClassNamePorValorPipe implements PipeTransform {
 
   public transform(
     value: number,
+    confs?: {
+      classePositivo?: (string | null),
+      classeZero?:     (string | null),
+      classeNegativo?: (string | null),
+    },
   ): string {
     if (value > 0.004999) {
-      return 'positivo';
+      return confs?.classePositivo ?? 'positivo';
     }
     if (value < -0.004999) {
-      return 'negativo';
+      return confs?.classeNegativo ?? 'negativo';
     }
-    return 'zero';
+    return confs?.classeZero ?? 'zero';
   }
 
 }

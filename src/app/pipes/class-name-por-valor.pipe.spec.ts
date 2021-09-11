@@ -44,4 +44,33 @@ describe('ClassNamePorValorPipe', () => {
 
   });
 
+  describe('transform com classes customizadas', () => {
+
+    it('deve manter classes default para configuração vazia', () => {
+      let confs = {};
+      expect(pipe.transform(0, confs)).toBe('zero');
+      expect(pipe.transform(1, confs)).toBe('positivo');
+      expect(pipe.transform(-1, confs)).toBe('negativo');
+    });
+
+    it('deve manter apenas as classes default que não sejam sobrescritas', () => {
+      let confs = { classeZero: 'zerado' };
+      expect(pipe.transform(0, confs)).toBe('zerado');
+      expect(pipe.transform(1, confs)).toBe('positivo');
+      expect(pipe.transform(-1, confs)).toBe('negativo');
+    });
+
+    it('deve trocas todas as classes quando especificado', () => {
+      let confs = {
+        classePositivo: 'positivado',
+        classeZero: 'zerado',
+        classeNegativo: 'negativado',
+      };
+      expect(pipe.transform(0, confs)).toBe('zerado');
+      expect(pipe.transform(1, confs)).toBe('positivado');
+      expect(pipe.transform(-1, confs)).toBe('negativado');
+    });
+
+  });
+
 });
