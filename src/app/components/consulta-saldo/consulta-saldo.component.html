@@ -1,5 +1,17 @@
-Nome: {{ cliente.nome }}
-<br />
-Saldo: {{ cliente.saldo }}
-<br />
-Último login: {{ cliente.ultimoLogin }}
+<section>
+  <h1>Consulta de saldo</h1>
+  <header>
+    <div>
+      Último login:
+      {{ cliente.ultimoLogin | date }}
+    </div>
+    <div>
+      Cliente:
+      {{ cliente.nome | uppercase }}
+    </div>
+    <div>
+      Saldo:
+      {{ cliente.saldo | number }}
+    </div>
+  </header>
+</section>
