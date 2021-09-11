@@ -6,6 +6,7 @@ describe('Cliente', () => {
 
   beforeEach(() => {
     cliente = new Cliente(
+      12,
       'João da Silva',
       100.00,
       new Date(),

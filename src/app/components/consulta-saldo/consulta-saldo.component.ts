@@ -15,6 +15,7 @@ export class ConsultaSaldoComponent implements OnInit {
   };
 
   public cliente: Cliente = new Cliente(
+    14,
     'Francisco das Torres',
     1.50,
     new Date(),
