@@ -1,16 +1,16 @@
 <section>
   <h1>Consulta de saldo</h1>
   <header>
-    <div>
+    <div class="atenuado">
       Último login:
       {{ cliente.ultimoLogin | date:'short' }}
     </div>
     <div>
-      Cliente:
+      <b>Cliente:</b>
       {{ cliente.nome | uppercase }}
     </div>
     <div>
-      Saldo:
+      <b>Saldo:</b>
       {{ cliente.saldo | currency:'BRL' }}
     </div>
   </header>
